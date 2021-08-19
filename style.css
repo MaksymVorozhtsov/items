@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  background-color: #D7D7D7;
+  color: #5D5D5D;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.border {
+  border: 3px solid #E18743;
+  border-radius: 8px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.title--white {
+  color: #fff;
+}
+
+.textbox {
+  background-color: #fff;
+  text-align: center;
+}
+
+.teaser {
+  padding: 40px;
+}
+
+.content {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.sidebar {
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #B2B0D7;
+  margin: 20px 2%;
+  padding: 30px 11px;
+  cursor: pointer;
+  height: 100px;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+
+  .items {
+    max-height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .items>* {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 18%;
+            flex: 1 1 18%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .sidebar {
+    margin-top: 0;
+    width: 20%;
+    max-width: 20%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .items {
+    width: 78%;
+    max-width: 78%;
+  }
+
+  .item {
+    margin: 20px 2%;
+    padding: 30px 11px;
+    width: 13%;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1440px) {
+  .item {
+    width: 14%;
+  }
+}
